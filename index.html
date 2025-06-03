@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIJU - Ecossistema Criativo e Estratégico</title>
+    <!-- Link para o Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para usar a fonte Inter e cores personalizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'wiju-dark-bg': '#0A0A1A', /* Mais escuro, quase preto */
+                        'wiju-card-bg': '#15152A', /* Fundo de card sutilmente mais claro */
+                        'wiju-text-light': '#F0F0F0', /* Texto principal claro */
+                        'wiju-text-muted': '#A0A0B0', /* Texto secundário/sutil */
+                        'wiju-accent-pink': '#FF00FF', /* Rosa vibrante da logo */
+                        'wiju-accent-cyan': '#00FFFF', /* Ciano elétrico da logo */
+                        'wiju-border-subtle': '#303045', /* Borda sutil */
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Estilos personalizados para a fonte Inter e efeitos mais sutis e elegantes -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A1A; /* Cor de fundo escura */
+            color: #F0F0F0; /* Cor do texto padrão */
+            line-height: 1.6;
+        }
+
+        /* Títulos e textos com destaque sutil */
+        .text-highlight {
+            color: #00FFFF; /* Ciano para destaque */
+            font-weight: 700;
+        }
+
+        /* Botões com gradiente e transição suave */
+        .btn-modern {
+            background: linear-gradient(90deg, #FF00FF, #8E2DE2); /* Gradiente rosa-roxo */
+            color: #FFFFFF;
+            padding: 1rem 3rem;
+            border-radius: 0.75rem; /* Menos arredondado para um toque moderno */
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+            border: none;
+        }
+
+        .btn-modern:hover {
+            background: linear-gradient(90deg, #8E2DE2, #FF00FF); /* Inverte o gradiente no hover */
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Cards com design limpo e bordas sutis */
+        .card-clean {
+            background-color: #15152A; /* Fundo do card */
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #303045; /* Borda sutil */
+        }
+
+        .card-clean:hover {
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+            transform: translateY(-3px);
+            border-color: #00FFFF; /* Borda ciano no hover */
+        }
+
+        .section-heading {
+            color: #FF00FF; /* Rosa vibrante para títulos de seção */
+            font-weight: 800;
+            margin-bottom: 4rem; /* Mais espaço abaixo dos títulos */
+            font-size: 3.5rem; /* Ajuste de tamanho para mais impacto */
+            line-height: 1.2;
+        }
+
+        /* Animação de fundo sutil e elegante */
+        @keyframes subtle-pan {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        .animated-bg-subtle {
+            background-size: 200% 200%;
+            animation: subtle-pan 90s linear infinite alternate; /* Animação mais lenta e suave */
+            background-image: linear-gradient(135deg, #0A0A1A, #15152A, #0A0A1A);
+        }
+
+        /* Estilo para listas dentro dos cards */
+        .card-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .card-list li::before {
+            content: '•'; /* Marcador de lista simples */
+            color: #00FFFF; /* Ciano para os marcadores */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="font-inter antialiased overflow-x-hidden animated-bg-subtle">
+
+    <!-- Seção Hero - Introdução impactante e moderna -->
+    <header class="relative min-h-screen flex items-center justify-center text-center p-8">
+        <div class="absolute inset-0 bg-wiju-dark-bg opacity-90"></div>
+        <div class="relative z-10 max-w-6xl mx-auto">
+            <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-tight mb-8 flex flex-col items-center justify-center">
+                <img src="https://imgur.com/9QJHZBz.png" alt="Logo WIJU" class="mb-6 h-56 md:h-72 lg:h-96 w-auto max-w-full">
+                <span class="text-highlight">Estratégia e Inovação</span> para o Seu Crescimento.
+            </h1>
+            <p class="text-xl md:text-2xl text-wiju-text-light mb-12 max-w-4xl mx-auto">
+                Mais que uma agência, somos um <span class="font-bold text-wiju-accent-cyan">ecossistema criativo e estratégico</span> dedicado a impulsionar marcas com autenticidade e resultados reais.
+            </p>
+            <a href="https://wa.me/5577988886400?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20WIJU!" target="_blank" class="btn-modern">
+                Fale Conosco no WhatsApp!
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-8 py-24">
+
+        <!-- Seção Propósito -->
+        <section id="proposito" class="mb-32 text-center">
+            <h2 class="section-heading">Nosso Propósito</h2>
+            <p class="text-2xl md:text-3xl text-wiju-text-light max-w-4xl mx-auto leading-relaxed">
+                <span class="font-extrabold text-wiju-accent-cyan">Crescemos juntos.</span> Seu sucesso é o nosso. A WIJU é uma parceria estratégica para a sua produtividade e expansão.
+            </p>
+        </section>
+
+        <!-- Seção Missão -->
+        <section id="missao" class="mb-32 text-center">
+            <h2 class="section-heading">Nossa Missão</h2>
+            <p class="text-2xl md:text-3xl text-wiju-text-light max-w-5xl mx-auto leading-relaxed">
+                Transformamos perfis em <span class="font-bold text-wiju-accent-cyan">presenças inesquecíveis</span>, utilizando conteúdo estratégico, personagens digitais com alma e o poder da IA, sempre com um toque humano.
+            </p>
+        </section>
+
+        <!-- Seção O Que a WIJU Já Entrega -->
+        <section id="entregas" class="mb-32">
+            <h2 class="section-heading text-center">Serviços Atuais</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Item de Serviço -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-pink">Conteúdo Estratégico</h3>
+                    <ul class="card-list text-wiju-text-muted space-y-3">
+                        <li>Criação de conteúdo com copy profissional</li>
+                        <li>Roteiros para Reels, Stories e Posts</li>
+                        <li>Calendário de conteúdo e linha editorial</li>
+                    </ul>
+                </div>
+                <!-- Item de Serviço -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-pink">Design e Identidade Visual</h3>
+                    <ul class="card-list text-wiju-text-muted space-y-3">
+                        <li>Design e Identidade Visual</li>
+                        <li>Edição de vídeos com estética própria</li>
+                        <li>Captação de vídeo e foto presencial (quando necessário)</li>
+                    </ul>
+                </div>
+                <!-- Item de Serviço -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-pink">Análise & Otimização</h3>
+                    <ul class="card-list text-wiju-text-muted space-y-3">
+                        <li>Biografia estratégica para o perfil</li>
+                        <li>Análise de métricas e concorrentes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção O Que a WIJU Vai Dominar -->
+        <section id="futuro" class="mb-32">
+            <h2 class="section-heading text-center">Próximas Inovações</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Item de Futuro -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-cyan">Expansão Digital</h3>
+                    <ul class="card-list text-wiju-text-muted space-y-3">
+                        <li>Criação de Sites otimizados e estratégicos</li>
+                        <li>Criação de personagens digitais com IA para influenciar perfis</li>
+                    </ul>
+                </div>
+                <!-- Item de Futuro -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-cyan">Estratégias de Crescimento</h3>
+                    <ul class="card-list text-wiju-text-muted space-y-3">
+                        <li>Funis automatizados para transformar seguidores em clientes</li>
+                        <li>Estratégias de crescimento com base em dados + comportamento</li>
+                        <li>Fórmulas de viralização com IA generativa</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Diferenciais -->
+        <section id="diferenciais" class="mb-32">
+            <h2 class="section-heading text-center">Nossos Diferenciais</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Diferencial 1 -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-pink">Contrato de Produtividade</h3>
+                    <p class="text-wiju-text-muted">Um modelo justo, transparente e orientado a resultado: ganha mais quem entrega mais.</p>
+                </div>
+                <!-- Diferencial 2 -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-pink">Personagens IA com Personalidade</h3>
+                    <p class="text-wiju-text-muted">Solução ideal para marcas com receio da câmera, mas com grande ambição de crescimento.</p>
+                </div>
+                <!-- Diferencial 3 -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-pink">Custo-Benefício Estratégico</h3>
+                    <p class="text-wiju-text-muted">A inteligência de uma agência estratégica com a eficiência de um funcionário CLT, superando a entrega de um social media fixo.</p>
+                </div>
+                <!-- Diferencial 4 -->
+                <div class="card-clean p-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-wiju-accent-pink">Conexão Humana</h3>
+                    <p class="text-wiju-text-muted">Nosso estilo de conteúdo foca em conectar com pessoas reais, não apenas com algoritmos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nova Ideia de Pacotes -->
+        <section id="pacotes" class="mb-32">
+            <h2 class="section-heading text-center">Nossos Pacotes</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Pacote Essência -->
+                <div class="card-clean p-8">
+                    <h3 class="text-3xl font-bold mb-4 text-wiju-accent-cyan">Pacote Essência</h3>
+                    <p class="text-4xl font-extrabold text-white mb-6">R$ 997/mês</p>
+                    <p class="text-wiju-text-muted mb-6">Ideal para pequenos negócios que buscam um posicionamento inicial sólido.</p>
+                    <ul class="card-list text-wiju-text-muted space-y-3">
+                        <li>3 posts por semana (feed ou reels)</li>
+                        <li>Design + edição básica</li>
+                        <li>Copywriting estratégico</li>
+                        <li>Linha editorial e cronograma</li>
+                        <li>Análise de concorrentes e biografia</li>
+                        <li>1 personagem IA simples (visual/texto)</li>
+                        <li>Roteiros de stories para o dono gravar</li>
+                    </ul>
+                </div>
+
+                <!-- Pacote Presença -->
+                <div class="card-clean p-8 scale-105 relative z-10">
+                    <h3 class="text-3xl font-bold mb-4 text-wiju-accent-cyan">Pacote Presença</h3>
+                    <p class="text-4xl font-extrabold text-white mb-6">R$ 1.497/mês</p>
+                    <p class="text-wiju-text-muted mb-6">Para marcas em fase de crescimento que desejam fortalecer sua presença.</p>
+                    <ul class="card-list text-wiju-text-muted space-y-3">
+                        <li>4 posts por semana (inclui 2 reels editados)</li>
+                        <li>Design + edição avançada</li>
+                        <li>Copywriting com storytelling</li>
+                        <li>Calendário + planejamento mensal</li>
+                        <li>1 personagem IA com voz e roteiro</li>
+                        <li>Análise de métricas mensais</li>
+                        <li>Consultoria de imagem para o dono da marca</li>
+                        <li>Prioridade no suporte</li>
+                    </ul>
+                </div>
+
+                <!-- Pacote Império -->
+                <div class="card-clean p-8">
+                    <h3 class="text-3xl font-bold mb-4 text-wiju-accent-cyan">Pacote Império</h3>
+                    <p class="text-4xl font-extrabold text-white mb-6">R$ 2.497/mês</p>
+                    <p class="text-wiju-text-muted mb-6">Para marcas que almejam liderar o mercado e ter um impacto significativo.</p>
+                    <ul class="card-list text-wiju-text-muted space-y-3">
+                        <li>Até 5 conteúdos por semana (reels, carrossel e foto)</li>
+                        <li>Produção presencial 1x/mês (quando possível)</li>
+                        <li>Edição profissional + trilha sonora exclusiva</li>
+                        <li>Criação de 1 site ou landing page por trimestre</li>
+                        <li>1 personagem IA avançado (voz, expressão, roteiro)</li>
+                        <li>Análise + consultoria de crescimento</li>
+                        <li>Acompanhamento quinzenal com relatório e ajustes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Call to Action Final / Contato -->
+        <section id="contato" class="text-center py-24 bg-wiju-card-bg rounded-xl shadow-lg border border-wiju-border-subtle">
+            <h2 class="section-heading mb-8">Pronto para Transformar Sua Marca?</h2>
+            <p class="text-xl text-wiju-text-light mb-12 max-w-3xl mx-auto leading-relaxed">
+                Entre em contato com a WIJU e descubra como podemos impulsionar seu crescimento com estratégia, identidade e inovação de ponta.
+            </p>
+            <a href="https://wa.me/5577988886400?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20WIJU!" target="_blank" class="btn-modern">
+                Fale Conosco no WhatsApp!
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-12 mt-24 bg-wiju-dark-bg text-wiju-text-muted text-sm border-t border-wiju-border-subtle">
+        <p>&copy; 2024 WIJU. Todos os direitos reservados. | Ecossistema Criativo e Estratégico.</p>
+    </footer>
+
+</body>
+</html>
